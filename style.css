@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(bhaiya1.jpg),url(bhaiya2.jpg);
+  background-repeat: no-repeat , no-repeat;
+  background-size: 45%,40%;
+  background-position: left center,right center;
+  background-color:rgb(230, 110, 212);
+  background-clip: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.card-container {
+  perspective: 20000px;
+  width: 500;
+  height: 1000;
+  margin-bottom: 3%;
+  padding-bottom: 5%;
+
+}
+
+.card {
+  text-align: center;
+  width: 350px;
+  height: 200px;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: center center;
+  margin-right: 20px;
+}
+
+.card.flipped {
+  transform: rotateY(150deg);
+  align-items: center;
+ margin-left: 60px;
+  width: 1000;
+  height: 1000;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+
+
+.frontc, .backc {
+  position: absolute;
+width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  backface-visibility: hidden;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.frontc {
+  background-color: #ffcce6;
+}
+
+.backc {
+  background-color: #ffd1e6;
+  transform: rotateY(180deg);
+}
